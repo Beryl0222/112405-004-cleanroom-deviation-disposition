@@ -14,6 +14,41 @@
       "id": "DV-10",
       "text": "质量补记：批次 R-22 暂缓流转，引用工艺卡 PC-6。",
       "kind": "review-note"
+    },
+    {
+      "id": "DV-20",
+      "kind": "production-log",
+      "text": "R22于八月十六日08:00开始，10:00结束，使用探头PR2，工序漂洗；校准在14:20完成。R23于15:00开始。"
+    },
+    {
+      "id": "DV-21",
+      "kind": "procedure",
+      "text": "PC6五月一日生效：漂洗电导不超过1.0。PC7八月十五日生效：漂洗电导不超过0.8，探头须在本班校准有效期内。"
+    },
+    {
+      "id": "DV-22",
+      "kind": "equipment-register",
+      "text": "PR2又称东线二号探头；同一工序的PR3不是其别名。PR2校准有效期为完成后八小时，不追溯之前读数。"
+    },
+    {
+      "id": "DV-23",
+      "kind": "operator-report",
+      "text": "R22九时十分电导0.78，但原表读数列曾写0.96，哪一项为异常前读数未注明。"
+    },
+    {
+      "id": "DV-24",
+      "kind": "quality-request",
+      "text": "质量员要求R22重新取样并核对漂洗时读数，不是直接改放行；R23尚未复核。"
+    },
+    {
+      "id": "DV-25",
+      "kind": "sample-report",
+      "text": "R22保留样的补检读数0.76，采样在生产结束后，未证明当时探头有效。"
+    },
+    {
+      "id": "DV-26",
+      "kind": "correction",
+      "text": "操作员更正DV23：0.96为冲洗前读数，0.78为冲洗后读数；不修改探头校准时间。"
     }
   ],
   "procedures": [
@@ -28,5 +63,37 @@
       "step": "漂洗"
     }
   ],
-  "case_id": "cleanroom-8"
+  "case_id": "cleanroom-8",
+  "context": {
+    "batches": [
+      {
+        "id": "R22",
+        "sources": [
+          "DV-20",
+          "DV-23"
+        ]
+      },
+      {
+        "id": "R23",
+        "sources": [
+          "DV-20"
+        ]
+      }
+    ],
+    "reviews": [
+      {
+        "id": "QR22",
+        "batch": "R22",
+        "state": "held",
+        "source": "DV-10"
+      }
+    ],
+    "retests": [
+      {
+        "id": "RT22",
+        "state": "pending",
+        "source": "DV-24"
+      }
+    ]
+  }
 }
