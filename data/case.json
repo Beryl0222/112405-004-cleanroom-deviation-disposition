@@ -1,0 +1,32 @@
+{
+  "records": [
+    {
+      "id": "DV-8",
+      "text": "09:10 冲洗后电导回到范围内；探头校准记录为 14:20，操作员未注明首次异常读数。",
+      "kind": "operator-report"
+    },
+    {
+      "id": "DV-9",
+      "text": "设备日志：探头校准完成，校准前偏差 0.18，校准后 0.03。",
+      "kind": "equipment-log"
+    },
+    {
+      "id": "DV-10",
+      "text": "质量补记：批次 R-22 暂缓流转，引用工艺卡 PC-6。",
+      "kind": "review-note"
+    }
+  ],
+  "procedures": [
+    {
+      "id": "PC-6",
+      "effective": "2026-05-01",
+      "step": "漂洗"
+    },
+    {
+      "id": "PC-7",
+      "effective": "2026-08-15",
+      "step": "漂洗"
+    }
+  ],
+  "case_id": "cleanroom-8"
+}
