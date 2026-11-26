@@ -1,0 +1,119 @@
+[
+  {
+    "batch_id": "R-18",
+    "disposition": "release",
+    "applicable_card_id": "PC-6",
+    "applicable_version": "1",
+    "findings": [],
+    "open_ri_ids": [],
+    "closed_ri_ids": [],
+    "recomputed_at": "2026-11-27T03:30:23.566625+08:00"
+  },
+  {
+    "batch_id": "R-22",
+    "disposition": "release",
+    "applicable_card_id": "PC-7",
+    "applicable_version": "1",
+    "findings": [
+      {
+        "rule": "R01-引用了非当时有效工艺版本",
+        "blocking": false,
+        "message": "复核 DV-10-F0 引用 PC-6 vNone，批次当时有效版本为 PC-7 v1，换版不溯及既往，该复核不能作为放行依据（已补引用有效版本的复核，原问题保留为信息项）",
+        "evidence_fact_ids": [
+          "DV-10-F0"
+        ]
+      },
+      {
+        "rule": "R02-读数早于批次后校准",
+        "blocking": false,
+        "message": "读数 EV-010-READING（4.6）发生在有效校准之前；批次结束后的校准不能倒推为当时合格，需校准后复检（对应复检已关闭，阻断解除）",
+        "evidence_fact_ids": [
+          "EV-010-READING"
+        ]
+      },
+      {
+        "rule": "R02-读数早于批次后校准",
+        "blocking": false,
+        "message": "读数 DV-8-F0（09:10 冲洗后电导回到范围内）发生在有效校准之前；批次结束后的校准不能倒推为当时合格，需校准后复检（对应复检已关闭，阻断解除）",
+        "evidence_fact_ids": [
+          "DV-8-F0"
+        ]
+      },
+      {
+        "rule": "R04-首次异常读数缺失",
+        "blocking": false,
+        "message": "DV-8-F1 表明首次异常读数未被记录，偏差经过不完整，需补齐（对应复检已关闭，阻断解除）",
+        "evidence_fact_ids": [
+          "DV-8-F1"
+        ]
+      }
+    ],
+    "open_ri_ids": [],
+    "closed_ri_ids": [
+      "RI-R-22-R02",
+      "RI-R-22-R04"
+    ],
+    "recomputed_at": "2026-11-27T03:30:23.566625+08:00"
+  },
+  {
+    "batch_id": "R-23",
+    "disposition": "hold",
+    "applicable_card_id": "PC-7",
+    "applicable_version": "1",
+    "findings": [
+      {
+        "rule": "R03-读数与校准先后不明",
+        "blocking": true,
+        "message": "叙述 DV-23A-F0 无法确定读数在本次校准之前还是之后，不得按‘后来正常’放行，需补做读数",
+        "evidence_fact_ids": [
+          "DV-23A-F0"
+        ]
+      },
+      {
+        "rule": "W01-建议类表述不得作为执行证据",
+        "blocking": false,
+        "message": "DV-23A-F2 是操作建议（建议对本批末道漂洗重新取样检测），建议不等于已执行，不能作为放行或关闭复检的证据",
+        "evidence_fact_ids": [
+          "DV-23A-F2"
+        ]
+      },
+      {
+        "rule": "W01-建议类表述不得作为执行证据",
+        "blocking": false,
+        "message": "DV-23E-F0 是操作建议（设备工程师建议先复测再安排校准），建议不等于已执行，不能作为放行或关闭复检的证据",
+        "evidence_fact_ids": [
+          "DV-23E-F0"
+        ]
+      },
+      {
+        "rule": "W01-建议类表述不得作为执行证据",
+        "blocking": false,
+        "message": "DV-23E-F1 是操作建议（复检安排：待质量确认后执行，尚未执行），建议不等于已执行，不能作为放行或关闭复检的证据",
+        "evidence_fact_ids": [
+          "DV-23E-F1"
+        ]
+      },
+      {
+        "rule": "R06-存在未关闭复检事项",
+        "blocking": true,
+        "message": "批次 R-23 存在 1 项未关闭复检：RI-R-23-R03",
+        "evidence_fact_ids": []
+      }
+    ],
+    "open_ri_ids": [
+      "RI-R-23-R03"
+    ],
+    "closed_ri_ids": [],
+    "recomputed_at": "2026-11-27T03:30:23.566625+08:00"
+  },
+  {
+    "batch_id": "R-24",
+    "disposition": "release",
+    "applicable_card_id": "PC-7",
+    "applicable_version": "1",
+    "findings": [],
+    "open_ri_ids": [],
+    "closed_ri_ids": [],
+    "recomputed_at": "2026-11-27T03:30:23.566625+08:00"
+  }
+]
